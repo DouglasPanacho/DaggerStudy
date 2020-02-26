@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        (application as App).appComponent.activitysubComponent(ActivityModule()).inject(this)
+        (application as App).appComponent.inject(this)
         setContentView(R.layout.activity_main)
         common.prin()
         repo.prin()
