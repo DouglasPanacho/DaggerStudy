@@ -8,6 +8,4 @@ import dagger.Module
 @Module
 abstract class ActivityModule {
 
-    @Binds
-    abstract fun bindsRepo(repositoryImpl: RepositoryImpl): Repository
 }

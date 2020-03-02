@@ -5,8 +5,11 @@ import com.farfetch.dagger.di.module.ActivityModule
 import com.farfetch.dagger.di.module.AppModule
 import com.farfetch.dagger.di.module.SubcomponentsModule
 import dagger.Component
+import javax.inject.Singleton
 
-@Component(modules = [AppModule::class,SubcomponentsModule::class])
+@Singleton
+@Component(modules = [AppModule::class, SubcomponentsModule::class])
 interface AppComponent {
-    fun inject(activity: MainActivity)
+
+    fun activityComponent(): ActivityComponent.Factory
 }
